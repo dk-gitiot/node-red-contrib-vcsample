@@ -1,0 +1,38 @@
+<style>
+	.whitelabel { color:"white";
+	
+	}
+</style>
+<script type="text/javascript">
+    RED.nodes.registerType("Hello World",{
+        category:'Valgenesis',
+        color: '#FFFFFF',
+        defaults:{
+            name:{value:""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon:"face.png",
+        label: function() {
+            return this.name||"VConnect";
+		}
+		labelStyle: function() {
+    return "whitelabel";
+},
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Hello World">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic">
+    </div>
+</script>
+
+<script type="text/x=red" data-help-name="Hello World">
+    <p> A Node that increments every time </p>
+</script>
